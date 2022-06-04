@@ -1,0 +1,21 @@
+<div id="<%= dom_id book %>">
+  <p>
+    <strong>Name:</strong>
+    <%= book.name %>
+  </p>
+ <p>
+    <strong>Author:</strong>
+    <%= book.author.name %>
+  </p>
+  <p>
+    <strong>Cover photos:</strong>
+    <br>
+     <% if book.cover_photos.attached? %>
+     <%= image_tag(book.cover_photos, size: '100x100')%>
+     <%end%>
+     <br>
+    <%= link_to book.cover_photos.filename, book.cover_photos if book.cover_photos.attached? %>
+
+  </p>
+
+</div>

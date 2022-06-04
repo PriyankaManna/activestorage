@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Authors</h1>
+<%= link_to "Create New author", new_author_path ,class: 'btn btn-danger'%>
+
+<div class="row">
+  <div id="authors">
+    <% @authors.each do |author| %>
+    <div class="col-lg-4">
+      <%= render author %>
+      <p>
+        <%= link_to "Show this author", author ,class: 'btn btn-success'%>
+        <br> <br>
+        <%= link_to "#{author.name}'s Books", author_books_path(author) ,class: 'btn btn-info'%>
+      </p>
+        </div>
+    <% end %>
+  </div>
+</div>
