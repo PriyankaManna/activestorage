@@ -5,5 +5,6 @@
 <br>
 
 <div>
+  <%= button_to "Destroy this book", author_book_path(@book.author, @book), method: :delete %>
   <%= link_to "Back to books", author_books_path %>
 </div>
