@@ -15,9 +15,17 @@
      <% if author.profile_picture.attached? %>
       <%= image_tag(author.profile_picture, size: '100x100', format: 'png')%>
      <%end%>
-     <br>
-
+     <br>     
     <%= link_to author.profile_picture.filename, author.profile_picture if author.profile_picture.attached? %>
+    <br>
   </p>
-
+  <p>
+    <strong>awards:</strong>
+    <br>
+     <% if author.awards.attached? %>
+     <% author.awards.each do |award|%>
+      <%= image_tag(award, size: '100x100', format: 'png')%>
+      <%end%>
+     <%end%>
+  <p>
 </div>

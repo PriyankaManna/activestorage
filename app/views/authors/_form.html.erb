@@ -25,6 +25,10 @@
     <%= form.label :profile_picture, style: "display: block" %>
     <%= form.file_field :profile_picture %>
   </div>
+   <div>
+    <%= form.label :awards, style: "display: block" %>
+    <%= form.file_field :awards , :multiple => true %>
+  </div>
 
   <div>
     <%= form.submit %>

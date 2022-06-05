@@ -1,5 +1,6 @@
 class Author < ApplicationRecord
   has_one_attached :profile_picture
+  has_many_attached :awards
   has_many :books
 
   validate :profile_picture_format
